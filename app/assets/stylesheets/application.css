@@ -1,13 +1,10 @@
 /*
  *= require "bootstrap.min"
- *= require "elegant-icons.css"
  *= require "font-awesome.min"
+ *= require "elegant-icons"
  *= require "magnific-popup"
  *= require "nice-select"
  *= require "owl.carousel.min"
  *= require "slicknav.min"
  *= require "style"
- *= require_tree .
- *= require_self
-
  */
