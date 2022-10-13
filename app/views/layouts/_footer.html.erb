@@ -8,18 +8,18 @@
                     <div class="footer__logo">
                         <a <%= link_to image_tag("footer-logo.png"), root_path %></a>
                     </div>
-                    <p>The customer is at the heart of our unique business model, which includes design.</p>
+                    <p><%= t '.footer_head' %></p>
                     <a href="#"><%= image_tag "payment.png" %></a>
                 </div>
             </div>
             <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
                 <div class="footer__widget">
-                    <h6>Shopping</h6>
+                    <h6><%= t ".shopping" %></h6>
                     <ul>
-                        <li><a href="#">Clothing Store</a></li>
-                        <li><a href="#">Trending Shoes</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Sale</a></li>
+                        <li><a href="#"><%= t "clothing_store" %></a></li>
+                        <li><a href="#"><%= t "trending_shoes" %></a></li>
+                        <li><a href="#"><%= t "accessories" %></a></li>
+                        <li><a href="#"><%= t "sale" %></a></li>
                     </ul>
                 </div>
             </div>
