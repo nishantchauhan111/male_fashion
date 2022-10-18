@@ -40,21 +40,24 @@
             <div class="row">
                 <div class="col-lg-6 col-md-7">
                     <div class="header__top__left">
-                        <p>Free shipping, 30-day return or refund guarantee.</p>
+                        <p><%= t("header.ad") %></p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-5">
                     <div class="header__top__right">
                         <div class="header__top__links">
-                             <%= link_to "Sing in", users_path %>
-                            <a href="#">FAQs</a>
+                             <%= link_to t("header.singin"), users_path %>
+                            <a href="#"><%= t("header.faq") %></a>
                         </div>
                         <div class="header__top__hover">
-                            <span>Usd <i class="arrow_carrot-down"></i></span>
+                            <span><%= t("header.language")%> <i class="arrow_carrot-down"></i></span>
                             <ul>
-                                <li>USD</li>
-                                <li>EUR</li>
-                                <li>USD</li>
+                            <% if current_page?(locale: :en) %>
+                                <li><%= link_to "ENG", locale: :gu %></li>
+                                <% else %>
+                                <li><%= link_to "GUJ", locale: :en %></li>
+                                <% end %>
+                                
                             </ul>
                         </div>
                     </div>
@@ -72,18 +75,18 @@
             <div class="col-lg-6 col-md-6">
                 <nav class="header__menu mobile-menu">
                     <ul>
-                        <li class="active"><%= link_to "Home", root_path %> </li>
-                        <li> <%= link_to "shop", products_path %></li>
-                        <li><a href="#">Pages</a>
+                        <li class="active"><%= link_to t("header.home"), root_path %> </li>
+                        <li> <%= link_to t("header.shop"), products_path %></li>
+                        <li><a href="#"><%= t("header.page")%></a>
                             <ul class="dropdown">
-                               <li><%= link_to "About us", abouts_path %></li>
-                                <li><%= link_to "shop", products_path %></li>
-                                <li><%= link_to "Cart", carts_path %></li>
-                                <li><%= link_to "Checkout", checkouts_path %></li>
-                                <li><%= link_to "Blog", blogs_path  %></li>
+                               <li><%= link_to t("header.about_us"), about_path %></li>
+                                <li><%= link_to t("header.shop"), products_path %></li>
+                                <li><%= link_to t("header.cart"), carts_path %></li>
+                                <li><%= link_to t("header.check_out"), checkouts_path %></li>
+                                <li><%= link_to t("header.blog"), blogs_path  %></li>
                             </ul>
                         </li>
-                        <li><%= link_to "Blog", blogs_path %></li>
+                        <li><%= link_to t("header.blog"), blogs_path %></li>
                         
                     </ul>
                 </nav>

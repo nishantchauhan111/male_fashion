@@ -1,8 +1,41 @@
 en:
-  views:
-    layots:
-      _footer:
-        footer_head: "The customer is at the heart of our unique business model, which includes design."
-        shopping : "Shopping"
+  footer:
+    footer_head: The customer is at the heart of our unique business model, which includes design.
+    shopping: Shopping
+    clothing_store: Clothing Store
+    trending_shoes: Trending Shoes
+    accessories: Accessories
+    sale: Sale
+    contect_us: Contact Us
+    payment: Payment Methods
+    delivery: Delivary
+    return: Return & Exchanges
+    new_letter: NewLetter
+    ad1: Be the first to know about new arrivals, look books, sales & promos!
 
+  header:
+    singin: Sing in
+    faq: FAQs
+    language: Language
+    ad: Free shipping, 30-day return or refund guarantee.
+    home: Home
+    shop: Shop
+    page: Pages
+    about_us: About us
+    cart: Cart
+    check_out: Check out
+    blog: Blog
+
+  home:
+    summer_coll: Summer Collection
+    winter_coll: Fall - Winter Collections 2030
+    ad1: A specialist label creating luxury essentials. Ethically crafted with an unwavering
+         commitment to exceptional quality.
+    clothe_coll: Clothing Collections 2030     
+    accessories: Accessories
+    shoe_coll: Shoes Spring 2030
+    best_seller: Best Sellers
+    new_arrival: New Arrivals
+    hot_sale: Hot Sales
+    
 

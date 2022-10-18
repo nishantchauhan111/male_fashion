@@ -8,37 +8,37 @@
                     <div class="footer__logo">
                         <a <%= link_to image_tag("footer-logo.png"), root_path %></a>
                     </div>
-                    <p><%= t '.footer_head' %></p>
+                    <p><%= t ('footer.footer_head') %></p>
                     <a href="#"><%= image_tag "payment.png" %></a>
                 </div>
             </div>
             <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
                 <div class="footer__widget">
-                    <h6><%= t ".shopping" %></h6>
+                    <h6><%= t ("footer.shopping") %></h6>
                     <ul>
-                        <li><a href="#"><%= t "clothing_store" %></a></li>
-                        <li><a href="#"><%= t "trending_shoes" %></a></li>
-                        <li><a href="#"><%= t "accessories" %></a></li>
-                        <li><a href="#"><%= t "sale" %></a></li>
+                        <li><a href="#"><%= t("footer.clothing_store") %></a></li>
+                        <li><a href="#"><%= t("footer.trending_shoes") %></a></li>
+                        <li><a href="#"><%= t("footer.accessories") %></a></li>
+                        <li><a href="#"><%= t("footer.sale") %></a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-6">
                 <div class="footer__widget">
-                    <h6>Shopping</h6>
+                    <h6><%= t ("footer.shopping") %></h6>
                     <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Payment Methods</a></li>
-                        <li><a href="#">Delivary</a></li>
-                        <li><a href="#">Return & Exchanges</a></li>
+                        <li><a href="#"><%= t("footer.contect_us")%></a></li>
+                        <li><a href="#"><%= t("footer.payment")%></a></li>
+                        <li><a href="#"><%= t("footer.delivery")%></a></li>
+                        <li><a href="#"><%= t("footer.return")%></a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
                 <div class="footer__widget">
-                    <h6>NewLetter</h6>
+                    <h6><%= t("footer.new_letter")%></h6>
                     <div class="footer__newslatter">
-                        <p>Be the first to know about new arrivals, look books, sales & promos!</p>
+                        <p><%= t("footer.ad1")%></p>
                         <form action="#">
                             <input type="text" placeholder="Your email">
                             <button type="submit"><span class="icon_mail_alt"></span></button>

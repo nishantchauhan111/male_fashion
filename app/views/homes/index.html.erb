@@ -7,11 +7,10 @@
                     <div class="row">
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
-                                <h6>Summer Collection</h6>
-                                <h2>Fall - Winter Collections 2030</h2>
-                                <p>A specialist label creating luxury essentials. Ethically crafted with an unwavering
-                                    commitment to exceptional quality.</p>
-                                <a  class="primary-btn"  <%= link_to "Shop now", products_path %>></a> 
+                                <h6><%= t("home.summer_coll")%></h6>
+                                <h2><%= t("home.winter_coll")%></h2>
+                                <p><%= t("home.ad1")%></p>
+                                <a  class="primary-btn"  <%= link_to t("footer.shopping"), products_path %>></a> 
                                 <div class="hero__social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -28,11 +27,10 @@
                     <div class="row">
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
-                                <h6>Summer Collection</h6>
-                                <h2>Fall - Winter Collections 2022</h2>
-                                <p>A specialist label creating luxury essentials. Ethically crafted with an unwavering
-                                    commitment to exceptional quality.</p>
-                                <a  class="primary-btn" <%= link_to "Shop now", products_path %>></a> 
+                                <h6><%= t("home.summer_coll")%></h6>
+                                <h2><%= t("home.winter_coll")%></h2>
+                                <p><%= t("home.ad1")%></p>
+                                <a  class="primary-btn" <%= link_to t("footer.shopping"), products_path %>></a> 
                                 <div class="hero__social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -58,8 +56,8 @@
                             <%= image_tag "banner/banner-1.jpg" %>
                         </div>
                         <div class="banner__item__text">
-                            <h2>Clothing Collections 2030</h2>
-                            <a href="#">Shop now</a>
+                            <h2><%= t("home.clothe_coll")%></h2>
+                            <a href="#"><%= t("footer.shopping")%></a>
                         </div>
                     </div>
                 </div>
@@ -69,8 +67,8 @@
                             <%= image_tag "banner/banner-2.jpg" %>
                         </div>
                         <div class="banner__item__text">
-                            <h2>Accessories</h2>
-                            <a href="#">Shop now</a>
+                            <h2><%= t("home.accessories")%></h2>
+                            <a href="#"><%= t("footer.shopping")%></a>
                         </div>
                     </div>
                 </div>
@@ -80,8 +78,8 @@
                             <%= image_tag "banner/banner-3.jpg" %>
                         </div>
                         <div class="banner__item__text">
-                            <h2>Shoes Spring 2030</h2>
-                            <a href="#">Shop now</a>
+                            <h2><%= t("home.shoe_coll")%></h2>
+                            <a href="#"><%= t("footer.shopping")%></a>
                         </div>
                     </div>
                 </div>
@@ -96,9 +94,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="filter__controls">
-                        <li class="active" data-filter="*">Best Sellers</li>
-                        <li data-filter=".new-arrivals">New Arrivals</li>
-                        <li data-filter=".hot-sales">Hot Sales</li>
+                        <li class="active" data-filter="*"><%= t("home.best_seller")%></li>
+                        <li data-filter=".new-arrivals"><%= t("home.new_arrival")%></li>
+                        <li data-filter=".hot-sales"><%= t("home.hot_sale")%></li>
                     </ul>
                 </div>
             </div>

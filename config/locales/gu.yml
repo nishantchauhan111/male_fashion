@@ -1,12 +1,42 @@
 en:
-  views:
-    layots:
-      _footer:
-        footer_head: "ગ્રાહક અમારા અનન્ય બિઝનેસ મોડલના કેન્દ્રમાં છે, જેમાં ડિઝાઇનનો સમાવેશ થાય છે."
-        shopping: "શોપિંગ"
-         clothing_store: "કપડાં સ્ટોર"
-        trending_shoes: "ટ્રેન્ડિંગ શૂઝ"
-        accessories: "એસેસરીઝ"
-        sale: "વેચાણ"
+  footer:
+     footer_head: ગ્રાહક અમારા અનન્ય બિઝનેસ મોડલના કેન્દ્રમાં છે, જેમાં ડિઝાઇનનો સમાવેશ થાય છે.
+     shopping: શોપિંગ
+     clothing_store: કપડાં સ્ટોર
+     trending_shoes: ટ્રેન્ડિંગ શૂઝ
+     accessories: એસેસરીઝ
+     sale: વેચાણ
+     contect_us: કોન્ટાક્ટ ઉસ
+     peyment: પેમેન્ટ મૅઠૉડ઼સ
+     delivery: ડિલિવરી
+     return: રીટર્ન & એક્સચેન્જર્સ
+     new_letter: ન્યૂ લેટ્ટેર
+     ad1: નવા આગમન, પુસ્તકો, વેચાણ અને પ્રોમો વિશે જાણવામાં પ્રથમ બનો!
+
+
+  header:
+    singin: સીંગ ઈન
+    faq: ફએકુ
+    language: ભાષા
+    ad: મફત શિપિંગ, 30-દિવસ વળતર અથવા રિફંડ ગેરંટી.
+    home: હોમ
+    shop: દુકાન
+    page: પેજ
+    about_us: અબૌત ઉસ
+    cart: કાર્ટ
+    check_out: ચેક આઉટ
+    blog: બ્લોગ
+
+  home:
+    summer_coll: સમર કલેક્શન  
+    winter_coll: પાનખર - વિન્ટર કલેક્શન 2030
+    ad1: લક્ઝરી એસેન્શિયલ બનાવતું નિષ્ણાત લેબલ. નૈતિક રીતે એક અતૂટ સાથે રચાયેલ છે
+                                    અસાધારણ ગુણવત્તા માટે પ્રતિબદ્ધતા.
+    clothe_coll: ક્લોથિંગ કલેક્શન 2030
+    accessories: એસેસરીઝ
+    shoe_coll: શૂઝ વસંત 2030
+    best_seller: શ્રેષ્ઠ વેચનાર
+    new_arrival: નવું આવેલું
+    hot_sale: હોટ સેલ્સ
 
 

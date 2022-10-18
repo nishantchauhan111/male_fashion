@@ -62,7 +62,7 @@ group :development do
   gem "devise"
   gem 'activeadmin'
   gem "image_processing", ">= 1.2"
-  gem "i18n "
+    
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
