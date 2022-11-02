@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
-  
+  has_many :order_items
   belongs_to :category, dependent: :destroy
-  has_many_attached :images
+  has_one_attached :image
 
 
 

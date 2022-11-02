@@ -5,7 +5,7 @@ ActiveAdmin.register Product do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :name, :category_id, :detail, :images , :mrp, :discount, :discount_type, :price, :active
+  permit_params :name, :category_id, :detail, :image , :mrp, :discount, :discount_type, :price, :active
   #
   # or
   #
@@ -15,6 +15,7 @@ ActiveAdmin.register Product do
   #   permitted
   # end
 
+
   filter :name
   filter :category_id
   filter :detail
@@ -23,12 +24,13 @@ ActiveAdmin.register Product do
   filter :discount_type
   filter :price
   filter :active
+  filter :image
 
 
 
   form do |f|
     f.inputs do 
-    f.file_field :images 
+    f.input :image, as: :file 
     f.input :name
     f.input :category_id
     f.input :detail

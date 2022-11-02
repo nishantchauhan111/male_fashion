@@ -8,13 +8,15 @@ Rails.application.routes.draw do
     devise_for :users
     
 
-    get :about, to: 'home#about'
-    get :blogs, to: 'home#blog'
+    get :about, to: 'homes#about'
+    get :blogs, to: 'homes#blog'
+    
     resources :carts
     resources :checkouts
     resources :products
     resources :users
     resources :devise
+    resources :order_items
   
     # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
     # Defines the root path route ("/")

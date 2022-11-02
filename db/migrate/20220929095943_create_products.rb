@@ -4,7 +4,6 @@ class CreateProducts < ActiveRecord::Migration[7.0]
       t.string :name
       t.references :category, null: false, foreign_key: true
       t.string :detail
-      t.binary :image
       t.decimal :mrp
       t.decimal :discount
       t.string :discount_type

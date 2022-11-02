@@ -1,0 +1,58 @@
+
+<div class="container">
+    <div class="row">
+        <div class="coll-6 mt-4">
+        <%= image_tag @product.image %>
+        </div>
+        <div class="coll-6 p-3 mt-0">
+            <p>
+                 <strong>Name:</strong>
+                 <%= @product.name %>
+            </p>
+
+             <p>
+                <strong>Catagoroy:</strong>
+                 <%= @product.category_id %>
+            </p>
+
+             <p>
+                <strong>Detail:</strong>
+                 <%= @product.detail %>
+            </p>
+
+            <p>
+                 <strong>Mrp:</strong>
+                 <%= @product.mrp %>
+            </p>
+
+            <p>
+                <strong>Discount:</strong>
+                <%= @product.discount %>
+            </p>
+
+            <p>
+                <strong>Discount type:</strong>
+                <%= @product.discount_type %>
+            </p>
+
+            <p>
+                <strong>Price:</strong>
+                <%= @product.price %>
+            </p>
+
+             <p>
+                <strong>Active:</strong>
+                <%= @product.active %>
+            </p>
+
+            <div class="btn-dark">
+                <%= link_to "Products", products_path %>
+            </div>
+
+            <div calss="btn btn-primary">
+            <%= link_to "buy now", checkouts_path %><br> <%= link_to "add to cart", carts_path %>
+            </div>
+        
+        </div>
+    </div>
+</div>

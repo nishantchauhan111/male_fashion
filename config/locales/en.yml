@@ -1,4 +1,4 @@
-en:
+gu:
   footer:
     footer_head: The customer is at the heart of our unique business model, which includes design.
     shopping: Shopping
@@ -29,13 +29,26 @@ en:
   home:
     summer_coll: Summer Collection
     winter_coll: Fall - Winter Collections 2030
-    ad1: A specialist label creating luxury essentials. Ethically crafted with an unwavering
-         commitment to exceptional quality.
+    add: A specialist label creating luxury essentials. Ethically crafted with an unwavering
+                               commitment to exceptional quality.
     clothe_coll: Clothing Collections 2030     
     accessories: Accessories
     shoe_coll: Shoes Spring 2030
     best_seller: Best Sellers
     new_arrival: New Arrivals
     hot_sale: Hot Sales
+    clothe_ad: Clothings Hot
+    shoe_ad: Shoe Collection
+    deal_of: Deal Of The Week
+    shop_now: Shop now
+    day: Days
+    hours: Hours
+    minutes: Minutes
+    second: Seconds
+    insta: Instagram
+    ad_2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+    latest_news: Latest News
+    fashion_trend: Fashion New Trends
     
 
