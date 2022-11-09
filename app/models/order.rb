@@ -1,19 +1,10 @@
 class Order < ApplicationRecord
   belongs_to :user
-
-  validates :total, presence: true
-  before_save :set_total
-
-  def total 
-    order_items.collect{|order_item| order_item.valid? ? order_items.unit_price*order_item.quantity : 0 }
-  end
-
-
-
-  private 
-
-  def set_total
-    self[:total] = total 
-  end
-
+  has_many :order_products
+  has_many :products, through: :order_products
+  
+  validates :date, presence: true
+  validates :subtotal, :discount, :total, presence: true
+  validates :payment_mode, :payment_id, :status, presence: true
+  
 end

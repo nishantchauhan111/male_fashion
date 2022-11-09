@@ -4,23 +4,18 @@ Rails.application.routes.draw do
     devise_for :admin_users, ActiveAdmin::Devise.config
     ActiveAdmin.routes(self)
 
-   
-    devise_for :users
-    
 
+    # root paths
+    
+    root "home#index"
+    
     get :about, to: 'homes#about'
     get :blogs, to: 'homes#blog'
     
-    resources :carts
-    resources :checkouts
-    resources :products
     resources :users
-    resources :devise
-    resources :order_items
-  
-    # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-    # Defines the root path route ("/")
+    resources :categories, only: [:index, :show]  
+    resources :products, only: [:index, :show]
+    resources :carts, only: [:index, :create, :destroy, :update]
+    resources :orders 
   end
-  root "homes#index"  
-
 end

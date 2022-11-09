@@ -50,7 +50,8 @@
             </div>
 
             <div calss="btn btn-primary">
-            <%= link_to "buy now", checkouts_path %><br> <%= link_to "add to cart", carts_path %>
+            <%= link_to "buy now", orders_path %><br> 
+            <%= link_to "add to cart", carts_path(product_id: @product.id), method: :post   %>
             </div>
         
         </div>

@@ -1,10 +1,15 @@
 class Product < ApplicationRecord
-  has_many :order_items
-  belongs_to :category, dependent: :destroy
+  belongs_to :category
+  has_many :order_products
+  has_many :orders, through: :order_products
+  has_many :carts
+  has_many :users, through: :carts
+  
+  validates :name, presence: true
+  validates :details, presence: true
+  validates :mrp, :discount, :total, presence: true
+  
   has_one_attached :image
 
-
-
-  validates :name, presence: true
-  validates :price, presence: true 
+  
 end

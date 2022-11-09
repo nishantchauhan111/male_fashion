@@ -193,11 +193,9 @@
                         <%= render product %>
 
 
-                        <%= form_for @order_item do |f| %>
-                        <%= f.hidden_field :product_id, product.id %>
-                        <%= f.number_field :quantity, 1 %>
-                        <%= submit_tag "Add to cart" %> 
-                        <% end %>
+                       
+
+                        
                         <p>
                         <%= link_to "Show this product", product %>
                         </p>

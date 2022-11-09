@@ -2,27 +2,27 @@ class ApplicationController < ActionController::Base
     before_action :set_locale
 
     include ApplicationHelper
-
-
-
-
-
-
-
-
-
-    private
-
-
-
-    def set_locale
-        I18n.locale = params[:locale] || session[:locales]  
-        session[:locales] = I18n.locale
-    end
+    def after_sign_in_path_for(resource)
+        root_path
+      end
+      
+      before_action :authenticate_user!
+      before_action :configure_permitted_parameters, if: :devise_controller?
+      before_action :set_locale
     
-    def default_url_options(option={})
-        {locale: I18n.locale}
-    end
-
+      protected
+    
+      def set_locale(&action)
+        I18n.locale = params[:locale] || session[:locale] || I18n.default_locale
+        session[:locale] = I18n.locale
+      end
+    
+      def default_url_options(options={})
+        { locale: I18n.locale }
+      end
+    
+      def configure_permitted_parameters
+        devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :mail, :password])
+      end
 
 end

@@ -82,7 +82,7 @@
                                <li><%= link_to t("header.about_us"), about_path %></li>
                                 <li><%= link_to t("header.shop"), products_path %></li>
                                 <li><%= link_to t("header.cart"), carts_path %></li>
-                                <li><%= link_to t("header.check_out"), checkouts_path %></li>
+                                <li><%= link_to t("header.check_out"), orders_path %></li>
                                 <li><%= link_to t("header.blog"), blogs_path  %></li>
                             </ul>
                         </li>
@@ -95,8 +95,7 @@
                 <div class="header__nav__option">
                     <a href="#" class="search-switch"><%= image_tag "icon/search.png" %></a>
                     <a href="#"><%= image_tag "icon/heart.png" %></a>
-                    <a href="#"><%= image_tag "icon/cart.png" %> <span>0</span></a>
-                    <div class="price">$0.00</div>
+                    <a href="#"><%=link_to image_tag("icon/cart.png"), carts_path %> <span></span></a>
                 </div>
             </div>
         </div>

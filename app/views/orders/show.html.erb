@@ -1,0 +1,131 @@
+<section class="confirmation_part section_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="confirmation_tittle">
+            <span class="text-info">Thank you. Your order has been received.</span>
+          </div>
+        </div>
+        <div class="col-lg-12 col-lx-4">
+          <div class="single_confirmation_details">
+            <h3 class="text-dark"><b>Order Information</b></h3>
+            <b>Order No.: </b><span class="text-danger"><b><%= @order.id %></b></span>
+              <ul>
+                <li>
+                  <p>Customer Email</p><span class="text-success">: <%= current_customer.email %></span>
+                </li>
+                <li>
+                  <p>Customer ID</p><span class="text-success">: <%= current_customer.id %></span>
+                </li>
+                <li>
+                  <p>Date</p><span class="text-success">: <%= @order.date %></span>
+                </li>
+                <li>
+                  <p>Subtotal</p><span class="text-success">: <%= number_to_currency(@order.subtotal) %></span>
+                </li>
+                <li>
+                  <p>Discount</p><span class="text-success">: <%= number_to_currency(@order.discount) %></span>
+                </li>
+                <li>
+                  <p>Shipping</p><span class="text-success">: <%= number_to_currency(50) %></span>
+                </li>
+                <li>
+                  <p>Total</p><span class="text-success">: <%= number_to_currency(@order.total) %></span>
+                </li>
+                <li>
+                  <p>Payment Method</p><span class="text-success">: <%= @order.payment_mode %></span>
+                </li>
+                <li>
+                  <p>Payment ID</p><span class="text-success">: <%= @order.payment_id %></span>
+                </li>
+                <li>
+                  <p>Status</p><span class="text-success">: <%= @order.status %></span>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 col-lx-4 mt-5">
+          <div class="single_confirmation_details">
+            <h4 class="text-dark"><b>Billing Address</b></h4>
+            <ul>
+              <li>
+                <p>Customer Name</p><span>: <%= current_customer.first_name %> <%= current_customer.last_name %></span>
+              </li>
+              <li>
+                <p>Phone Number</p><span>: <%= current_customer.phone %></span>
+              </li>
+              <li>
+                <p>Address</p><span>: <%= current_customer.address %></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 col-lx-4 mt-5">
+          <div class="single_confirmation_details">
+            <h4 class="text-dark"><b>Shipping Address</b></h4>
+            <ul>
+              <li>
+                <p>Customer Name</p><span>: <%= current_customer.first_name %> <%= current_customer.last_name %></span>
+              </li>
+              <li>
+                <p>Phone Number</p><span>: <%= current_customer.phone %></span>
+              </li>
+              <li>
+                <p>Address</p><span>: <%= current_customer.address %></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-lg-12">
+          <div class="order_details_iner">
+            <h2 class="text-dark text-center"><b>Order Details</b></h2><br>
+            <h3 class="text-dark text-center"><b>Order No.: </b><span class="text-danger"><b><%= @order.id %></b></span></h3><br>
+            <table class="table table-bordered table-hover">
+              <thead class="table-success">
+                <tr>
+                  <th scope="col"><b>Product Id</b></th>
+                  <th scope="col"><b>Product Name</b></th>
+                  <th scope="col"><b>Quantity</b></th>
+                  <th scope="col"><b>MRP</b></th>
+                  <th scope="col"><b>Discount</b></th>
+                  <th scope="col"><b>Total</b></th>
+                </tr>
+              </thead>
+              <% @order.order_products.each do |order_product| %>
+              <tbody>
+                <tr>
+                  <th><span><%= order_product.product.id %></span><br></th>
+                  <th><span><%= order_product.product.name %></span><br></th>
+                  <th><span><%= order_product.quantity %></span></th>
+                  <th><span><%= number_to_currency(order_product.mrp) %></span></th>
+                  <th><span><%= number_to_currency(order_product.discount_price) %></span></th>
+                  <th><span><%= number_to_currency(order_product.total) %></span></th>
+                </tr>
+                <% end %>
+                <tr>
+                  <th colspan="5"><b>Subtotal</b></th>
+                  <th><span><%= number_to_currency(@order.subtotal) %></span></th>
+                </tr>
+                <tr>
+                  <th colspan="5"><b>Discount</b></th>
+                  <th><span><%= number_to_currency(@order.discount) %></span></th>
+                </tr>
+                <tr>
+                  <th colspan="5"><b>Shipping</b></th>
+                  <th><span><%= number_to_currency(50) %></span></th>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th scope="col" colspan="5"><b>Total</b></th>
+                  <th scope="col"><b><%= number_to_currency(@order.total) %></b></th>
+                </tr>
+              </tfoot>       
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

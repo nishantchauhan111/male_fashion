@@ -1,4 +1,5 @@
 //= require "jquery-3.3.1.min"
+//= require "jquery_ujs"
 //= require "bootstrap.min"
 //= require "jquery.nice-select.min"
 //= require "jquery.nicescroll.min"

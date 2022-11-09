@@ -1,6 +1,11 @@
 class Category < ApplicationRecord
-    has_many :products
-
-
+    has_one :product
+    
     validates :name, presence: true
-end
+    
+    has_one_attached :image
+  
+    scope :published, ->{ where.not(published_at: nil) }
+    scope :unpublished, ->{ where(published_at: nil) }
+  end
+  
