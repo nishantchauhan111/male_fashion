@@ -6,8 +6,8 @@ class Product < ApplicationRecord
   has_many :users, through: :carts
   
   validates :name, presence: true
-  validates :details, presence: true
-  validates :mrp, :discount, :total, presence: true
+  validates :detail, presence: true
+  validates :mrp, :discount, presence: true
   
   has_one_attached :image
 

@@ -46,7 +46,18 @@
                 <div class="col-lg-6 col-md-5">
                     <div class="header__top__right">
                         <div class="header__top__links">
-                             <%= link_to t("header.singin"), users_path %>
+                             <% if user_signed_in? %>
+                  
+                    <%= link_to t("auth.Sign Out"), destroy_user_session_path, method: :delete %>
+                  
+                <% else %>
+                  
+                    <%= link_to t("auth.Sign Up"), new_user_registration_path %>
+                 
+                 
+                    <%= link_to t("auth.Sign In"), new_user_session_path %>
+                  
+                <% end %>        
                             <a href="#"><%= t("header.faq") %></a>
                         </div>
                         <div class="header__top__hover">
