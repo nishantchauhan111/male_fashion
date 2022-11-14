@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
     include ApplicationHelper
     def after_sign_in_path_for(resource)
+      UserMailer.welcome_email(current_user).deliver_now
         root_path
       end
       
@@ -22,7 +23,7 @@ class ApplicationController < ActionController::Base
       end
     
       def configure_permitted_parameters
-        devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :mail, :password])
+        devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :email, :password])
       end
 
 end

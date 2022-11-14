@@ -39,7 +39,7 @@ class OrdersController < InheritedResources::Base
           cart.delete
         end
         
-        OrderMailer.customer_email(current_customer).deliver_now
+        OrderMailer.user_email(current_user).deliver_now
         format.html { redirect_to order_url(@order), notice: "Order was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }

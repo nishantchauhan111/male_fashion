@@ -62,6 +62,8 @@ group :development do
   gem "devise"
   gem 'activeadmin'
   gem "image_processing", ">= 1.2"
+  gem "letter_opener"
+  gem "sidekiq"
     
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
