@@ -11,13 +11,16 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_11_01_054633) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
     t.string "resource_type"
-    t.integer "resource_id"
+    t.bigint "resource_id"
     t.string "author_type"
-    t.integer "author_id"
+    t.bigint "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author"
@@ -66,8 +69,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_01_054633) do
   end
 
   create_table "carts", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "product_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "product_id", null: false
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -97,8 +100,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_01_054633) do
 
   create_table "order_items", force: :cascade do |t|
     t.integer "quantity"
-    t.integer "product_id", null: false
-    t.integer "order_id", null: false
+    t.bigint "product_id", null: false
+    t.bigint "order_id", null: false
     t.integer "unit_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -107,7 +110,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_01_054633) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.decimal "total_price"
     t.decimal "discount"
     t.decimal "descount_type"
@@ -118,8 +121,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_01_054633) do
   end
 
   create_table "orders_products", force: :cascade do |t|
-    t.integer "order_id", null: false
-    t.integer "product_id", null: false
+    t.bigint "order_id", null: false
+    t.bigint "product_id", null: false
     t.decimal "mrp"
     t.decimal "discount"
     t.string "discount_type"
@@ -132,7 +135,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_01_054633) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.integer "category_id", null: false
+    t.bigint "category_id", null: false
     t.string "detail"
     t.decimal "mrp"
     t.decimal "discount"

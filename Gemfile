@@ -64,6 +64,7 @@ group :development do
   gem "image_processing", ">= 1.2"
   gem "letter_opener"
   gem "sidekiq"
+  gem "pg"
     
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
