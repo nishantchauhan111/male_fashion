@@ -12,10 +12,10 @@
             <b>Order No.: </b><span class="text-danger"><b><%= @order.id %></b></span>
               <ul>
                 <li>
-                  <p>Customer Email</p><span class="text-success">: <%= current_customer.email %></span>
+                  <p>Customer Email</p><span class="text-success">: <%= current_user.email %></span>
                 </li>
                 <li>
-                  <p>Customer ID</p><span class="text-success">: <%= current_customer.id %></span>
+                  <p>Customer ID</p><span class="text-success">: <%= current_user.id %></span>
                 </li>
                 <li>
                   <p>Date</p><span class="text-success">: <%= @order.date %></span>
@@ -49,13 +49,13 @@
             <h4 class="text-dark"><b>Billing Address</b></h4>
             <ul>
               <li>
-                <p>Customer Name</p><span>: <%= current_customer.first_name %> <%= current_customer.last_name %></span>
+                <p>Customer Name</p><span>: <%= current_user.first_name %> <%= current_user.last_name %></span>
               </li>
               <li>
-                <p>Phone Number</p><span>: <%= current_customer.phone %></span>
+                <p>Phone Number</p><span>: <%= current_user.phone %></span>
               </li>
               <li>
-                <p>Address</p><span>: <%= current_customer.address %></span>
+                <p>Address</p><span>: <%= current_user.address %></span>
               </li>
             </ul>
           </div>
@@ -65,13 +65,13 @@
             <h4 class="text-dark"><b>Shipping Address</b></h4>
             <ul>
               <li>
-                <p>Customer Name</p><span>: <%= current_customer.first_name %> <%= current_customer.last_name %></span>
+                <p>Customer Name</p><span>: <%= current_user.first_name %> <%= current_user.last_name %></span>
               </li>
               <li>
-                <p>Phone Number</p><span>: <%= current_customer.phone %></span>
+                <p>Phone Number</p><span>: <%= current_user.phone %></span>
               </li>
               <li>
-                <p>Address</p><span>: <%= current_customer.address %></span>
+                <p>Address</p><span>: <%= current_user.address %></span>
               </li>
             </ul>
           </div>
@@ -107,10 +107,6 @@
                 <tr>
                   <th colspan="5"><b>Subtotal</b></th>
                   <th><span><%= number_to_currency(@order.subtotal) %></span></th>
-                </tr>
-                <tr>
-                  <th colspan="5"><b>Discount</b></th>
-                  <th><span><%= number_to_currency(@order.discount) %></span></th>
                 </tr>
                 <tr>
                   <th colspan="5"><b>Shipping</b></th>

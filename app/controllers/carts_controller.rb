@@ -20,7 +20,7 @@ class CartsController < InheritedResources::Base
   def update
     @cart.update(quantity: params[:quantity])
     respond_to do |format|
-      format.html { redirect_to carts_url, notice: "Cart was successfully upadted." }
+      format.html { redirect_to carts_url, notice: "Cart was successfully upadted." } 
     end
   end
 

@@ -22,18 +22,15 @@ class OrdersController < InheritedResources::Base
       total = total + cart.product_price
       mrp = mrp + cart.product_mrp
     end
-    @order.subtotal = mrp
     @order.total = total
-    @order.status = "Pending"      
  
     respond_to do |format|
       if @order.save  
         current_user.carts.each do |cart|
-          @order.order_products.create(
+          @order.orders_product.create(
             product_id: cart.product.id,
             name: cart.product.name,
             quantity: cart.quantity,
-            mrp: cart.product_mrp,
             total: cart.product_price
           )
           cart.delete
@@ -61,7 +58,7 @@ class OrdersController < InheritedResources::Base
   end
 
   def order_params
-    params.require(:order).permit(:payment_mode, :payment_id)
+    params.require(:order).permit(:user_id, :total, :product_id, :name, :quantity, :mrp, )
   end
 
 end
