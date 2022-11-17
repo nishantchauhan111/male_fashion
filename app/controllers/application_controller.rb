@@ -3,8 +3,7 @@ class ApplicationController < ActionController::Base
 
     include ApplicationHelper
     def after_sign_in_path_for(resource)
-      UserMailer.welcome_email(current_user).deliver_now
-        root_path
+    
       end
       
       before_action :authenticate_user!
