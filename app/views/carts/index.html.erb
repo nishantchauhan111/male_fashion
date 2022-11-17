@@ -14,58 +14,50 @@
                                 </tr>
                             </thead>
                             <tbody>
-                             <div id="products">
-            <% total = 0 %>
-            <% mrp = 0 %>
-                    <% @carts.each do |cart| %>
-                  <% total = total + cart.product_price %>
-                   <tr>
-                     <td class="product__cart__item">
-                        <div class="product__cart__item__pic">
-                             <%= image_tag cart.product.image  %>
-                        </div>
-                        <div class="product__cart__item__text   ">
-                            <h6><%= cart.product.name %></h6>
-                        </div>
-                    </td>
-                    <%= form_with model: cart, id: "cart_#{cart.id}" do %>
-                    <td class="quantity__item">
-                        <div class="quantity">
-                            <div class="pro-qty-2">
-                                 <input type="text" name="quantity" data-id="<%= cart.id %>" data-price="<%= cart.product.mrp %>" value="<%= cart.quantity %>">
-                            </div>
-                        </div>
-                    </td>
-                    <td class="cart__price"><%= number_to_currency(cart.product.price) %></td>
-                    <td class="cart__close"><% if current_user %>
-                      <%= link_to cart, data: {confirm: 'Remove: Are you sure you want to remove this prodyct?'}, method: :delete do %>
-                        <i class="fa fa-lg fa-trash text-danger" aria-hidden="true"></i>
-                      <% end %></i></td>
-
-    
-                        
-                      </div>
-                    <% end %>
-                    <% end %>
-
-
-                    <% end %>
-                    </div>            
+                            <div id="products">
+                                <% total = 0 %>
+                                <% mrp = 0 %>
+                                <% @carts.each do |cart| %>
+                                <% total = total + cart.product_price %>
+                            <tr>
+                                <td class="product__cart__item">
+                                    <div class="product__cart__item__pic">
+                                        <%= image_tag cart.product.image  %>
+                                    </div>
+                                     <div class="product__cart__item__text   ">
+                                        <h6><%= cart.product.name %></h6>
+                                     </div>
+                                </td>
+                                <%= form_with model: cart, id: "cart_#{cart.id}" do %>
+                                <td class="quantity__item">
+                                    <div class="quantity">
+                                        <div class="pro-qty-2">
+                                            <input type="text" name="quantity" data-id="<%= cart.id %>" data-price="<%= cart.product.mrp %>" value="<%= cart.quantity %>">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="cart__price"><%= number_to_currency(cart.product.price) %></td>
+                                <td class="cart__close"><% if current_user %>
+                                    <%= link_to cart, data: {confirm: 'Remove: Are you sure you want to remove this prodyct?'}, method: :delete do %>
+                                        <i class="fa fa-lg fa-trash text-danger" aria-hidden="true"></i>
+                                    <% end %></i></td>  
+                                </div>
+                                 <% end %>
+                                <% end %>
+                            <% end %>
+                        </div>            
                     </tbody>        
-                        </table>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="continue__btn">
-                                <a <%= link_to "Continue Shopping", products_path %></a>
-                            </div>
-                        </div>
-    
-
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="continue__btn update__btn">
-                                  <!-- Update cart -->
-                            
+                </table>
+            </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="continue__btn">
+                     <a <%= link_to "Continue Shopping", products_path %></a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="continue__btn update__btn">
+                    <!-- Update cart -->
                             </div>
                         </div>
                     </div>
@@ -81,7 +73,6 @@
                     <div class="cart__total">
                         <h6>Cart total</h6>
                         <ul>
-                        
                             <li>Subtotal <span><%= number_to_currency(total) %></span></li>
                             
                             <li>Total <span><%= number_to_currency(total) %></span></li>
